@@ -1,0 +1,22 @@
+<% include partials/header %>
+<div class="container">
+    <h1><%= title %></h1>
+    <div class="table-responsive">
+        <table class="table table-striped table-hover">
+            <tr>
+                <th>Id</th>
+                <th>Title</th>
+                <th>Image</th>
+            </tr>
+            <% photos.forEach(function(photo){ %>
+            <tr>
+                <td><%= photo.id %> </td>
+                <td><%= photo.title %> </td>
+                <td><img src=<%= photo.thumbnailUrl %> /></td>
+            </tr>
+            <% }) %>
+
+        </table>
+    </div>
+</div>
+<% include partials/footer %>
